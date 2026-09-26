@@ -1,0 +1,14 @@
+---
+title: "p8105_hw1_zc2995"
+author: "Zhenghong Chen zc2959"
+date: "2026-09-26"
+output: github_document
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+```
+
+# Problem 1
+
+# Problem 2

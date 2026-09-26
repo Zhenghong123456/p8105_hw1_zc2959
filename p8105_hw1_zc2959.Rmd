@@ -84,9 +84,9 @@ The mean of `norm_samp` can be calculated because it is a numeric variable.
 
 For `norm_samp_pos`, R treats TRUE as 1 and FALSE as 0, so
 
-\[
+$$
 \text{mean} = \frac{\#\{\text{TRUE}\}}{10},
-\]
+$$
 
 which is the proportion of observations for which `norm_samp > 0` is TRUE.
 
@@ -104,11 +104,11 @@ as.numeric(pull(problem2_df, vec_factor))
 
 For `norm_samp_pos`, converting the logical values to numeric gives
 
-\[
+$$
 \text{TRUE} \rightarrow 1,
 \qquad
 \text{FALSE} \rightarrow 0.
-\]
+$$
 
 This explains why the mean of `norm_samp_pos` can be calculated.
 

@@ -15,9 +15,9 @@ data("penguins", package = "palmerpenguins")
 ```
 ## penguins dataset description
 
-The `penguins` dataset contains information on three penguin species:`r paste(levels(pull(penguins,species)), collapse = ", ")`. The penguins were observed on `r paste(levels(pull(penguins,island)), collapse = ", ")` islands. Important variables include `species`, `island`, `bill_length_mm`,`bill_depth_mm`,`flipper_length_mm`, `body_mass_g`, `sex`, and `year`.
+The `penguins` dataset contains information on three penguin species:`r paste(levels(pull(penguins, species)), collapse = ", ")`. The penguins were observed on `r paste(levels(pull(penguins, island)), collapse = ", ")` islands. Important variables include `species`, `island`, `bill_length_mm`,`bill_depth_mm`,`flipper_length_mm`, `body_mass_g`, `sex`, and `year`.
 
-The dataset has `r nrow(penguins)` observations and `r ncol(penguins)` variables. The mean flipper length is `r round(mean(pull(penguins,flipper_length_mm), na.rm = TRUE), digit = 2)`mm.
+The dataset has `r nrow(penguins)` observations and `r ncol(penguins)` variables. The mean flipper length is `r round(mean(pull(penguins, flipper_length_mm), na.rm = TRUE), digits = 2)`mm.
 
 ## penguins scatterplot
 
@@ -46,3 +46,44 @@ ggsave(
 
 
 # Problem 2
+
+## dataframe
+
+```{r problem2_dataframe}
+problem2_df = tibble(
+  norm_samp = rnorm(10),
+  norm_samp_pos = norm_samp > 0,
+  vec_char = c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j"),
+  vec_factor = factor(c(
+    "A", "B", "C", "A", "B",
+    "C", "A", "B", "C", "A"
+  ))
+  
+)
+
+```
+
+## variable means
+
+```{r variable_means}
+mean(pull(problem2_df, norm_samp))
+mean(pull(problem2_df, norm_samp_pos))
+mean(pull(problem2_df, vec_char))
+mean(pull(problem2_df, vec_factor))
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

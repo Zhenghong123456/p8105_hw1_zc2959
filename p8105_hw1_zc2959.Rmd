@@ -72,15 +72,20 @@ mean(pull(problem2_df, vec_char))
 mean(pull(problem2_df, vec_factor))
 
 ```
-### Description
+### Description for varibale means
 
-The mean can be calculated for numeric and logical variables. For logical variables, R treats TRUE as 1 and FALSE as 0; therefor, the mean represents the proportion fo TRUE values. Since character and factor variables are not numeric, their means cannnot be calculated directly.
+The mean can be calculated for numeric and logical variables. For logical variables, R treats TRUE as 1 and FALSE as 0; therefor, the mean represents the proportion of TRUE values. Since character and factor variables are not numeric, their means cannnot be calculated directly.
 
+## Numeric conversion
 
+```{r numeric_conversion, results = "hide", warning = FALSE}
+as.numeric(pull(problem2_df, norm_samp_pos))
+as.numeric(pull(problem2_df, vec_char))
+as.numeric(pull(problem2_df, vec_factor))
+```
+### Description for numeric conversion
 
-
-
-
+When converting logical veriables to numeric values, TRUE becomes 1 and FALSE becomes 0, which explains why their mean can be calculated. Converting character varibales to numeric values, however, results in NA values because chararcters themselves do not represent numerical values. When factor variables are converted to numeric values, integer codes corresponding to the factor levels are generated; these codes represent the factor levels rather than meaning ful numercial measurements. This helps explain why the means can be calculated for logical variables, but not directly for character or factor variables.
 
 
 

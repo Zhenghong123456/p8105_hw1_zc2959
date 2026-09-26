@@ -17,7 +17,7 @@ data("penguins", package = "palmerpenguins")
 
 The `penguins` dataset contains information on three penguin species:`r paste(levels(pull(penguins,species)), collapse = ", ")`. The penguins were observed on `r paste(levels(pull(penguins,island)), collapse = ", ")` islands. Important variables include `species`, `island`, `bill_length_mm`,`bill_depth_mm`,`flipper_length_mm`, `body_mass_g`, `sex`, and `year`.
 
-The dataset has `r nrow(penguins)` observations and `r ncol(penguins)` variables. The mean flipper length is `r round(mean(pull(penguins,flipper_length_mm), na.rm = TRUE),2)`mm.
+The dataset has `r nrow(penguins)` observations and `r ncol(penguins)` variables. The mean flipper length is `r round(mean(pull(penguins,flipper_length_mm), na.rm = TRUE), digit = 2)`mm.
 
 ## penguins scatterplot
 
@@ -38,8 +38,8 @@ penguins_scatterplot
 ggsave(
   "penguins_scatterplot.pdf",
   plot = penguins_scatterplot,
-  height = 5,
-  width = 7
+  height = 4,
+  width = 6
 )
 ```
 

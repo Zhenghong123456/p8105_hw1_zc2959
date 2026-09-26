@@ -13,13 +13,13 @@ library(tidyverse)
 ```{r load_penguins}
 data("penguins", package = "palmerpenguins")
 ```
-## penguins dataset description
+## Penguins dataset description
 
 The `penguins` dataset contains information on three penguin species:`r paste(levels(pull(penguins, species)), collapse = ", ")`. The penguins were observed on `r paste(levels(pull(penguins, island)), collapse = ", ")` islands. Important variables include `species`, `island`, `bill_length_mm`,`bill_depth_mm`,`flipper_length_mm`, `body_mass_g`, `sex`, and `year`.
 
 The dataset has `r nrow(penguins)` observations and `r ncol(penguins)` variables. The mean flipper length is `r round(mean(pull(penguins, flipper_length_mm), na.rm = TRUE), digits = 2)`mm.
 
-## penguins scatterplot
+## Penguins scatterplot
 
 ```{r penguins_scatterplot}
 penguins_scatterplot = ggplot(
@@ -47,23 +47,23 @@ ggsave(
 
 # Problem 2
 
-## dataframe
+## Dataframe
 
 ```{r problem2_dataframe}
+set.seed(1)
+
 problem2_df = tibble(
   norm_samp = rnorm(10),
   norm_samp_pos = norm_samp > 0,
   vec_char = c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j"),
   vec_factor = factor(c(
-    "A", "B", "C", "A", "B",
-    "C", "A", "B", "C", "A"
+    "A", "B", "C", "A", "B","C", "A", "B", "C", "A"
   ))
-  
 )
 
 ```
 
-## variable means
+## Variable means
 
 ```{r variable_means}
 mean(pull(problem2_df, norm_samp))
@@ -72,7 +72,9 @@ mean(pull(problem2_df, vec_char))
 mean(pull(problem2_df, vec_factor))
 
 ```
+### Description
 
+The mean can be calculated for numeric and logical variables. For logical variables, R treats TRUE as 1 and FALSE as 0; therefor, the mean represents the proportion fo TRUE values. Since character and factor variables are not numeric, their means cannnot be calculated directly.
 
 
 

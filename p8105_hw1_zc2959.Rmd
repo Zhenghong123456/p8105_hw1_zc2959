@@ -1,5 +1,5 @@
 ---
-title: "p8105_hw1_zc2995"
+title: "p8105_hw1_zc2959"
 author: "Zhenghong Chen zc2959"
 date: "2026-09-26"
 output: github_document
@@ -10,5 +10,13 @@ library(tidyverse)
 ```
 
 # Problem 1
+```{r load_penguins}
+data("penguins", package = "palmerpenguins")
+```
+
+The `penguins` dataset contains information on three penguin species:`r paste(levels(pull(penguins,species)), collapse = ", ")`. The penguins were observed on `r paste(levels(pull(penguins,island)), collapse = ", ")` islands. Important variables include `species`, `island`, `bill_length_mm`,`flipper_length_mm`, `body_mass_g`, `sex`, and `year`.
+
+The dataset has `r nrow(penguins)` observations and `r ncol(penguins)` variables. The mean flipper length is `r round(mean(pull(penguins,flipper_length_mm), na.rm = TRUE),2)`mm.
+
 
 # Problem 2

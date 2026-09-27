@@ -67,6 +67,7 @@ problem2_df = tibble(
     ))
 )
 
+problem2_df
 ```
 
 ## Variable means

@@ -85,7 +85,7 @@ The mean of `norm_samp` can be calculated because it is a numeric variable.
 For `norm_samp_pos`, R treats TRUE as 1 and FALSE as 0, so
 
 $$
-\text{mean} = \frac{\#\{\text{TRUE}\}}{10}
+\text{mean} = \frac{\text{number of TRUE values}}{10}
 $$
 
 which is the proportion of observations for which `norm_samp > 0` is TRUE.
